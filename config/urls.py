@@ -8,7 +8,8 @@ router = routers.DefaultRouter()
 urlpatterns = [
     # path('', include(router.urls)),
     path('', include('snippets.urls')),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
+
+urlpatterns += [path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))]
 
 
