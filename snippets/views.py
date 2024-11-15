@@ -1,11 +1,9 @@
 from rest_framework.decorators import api_view, action
-from rest_framework.views import APIView
 from .models import Snippet
 from .serializers import SnippetSerializer, UserSerializer
 from rest_framework.response import Response
-from rest_framework import renderers, status
-from django.http import Http404
-from rest_framework import generics, permissions, viewsets
+from rest_framework import renderers
+from rest_framework import permissions, viewsets
 from django.contrib.auth.models import User
 from snippets.permissions import IsOwnerOrReadOnly
 from rest_framework.reverse import reverse
