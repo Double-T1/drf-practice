@@ -19,7 +19,6 @@ from rest_framework import renderers, routers
 router = routers.DefaultRouter()
 router.register(r"snippets", views.SnippetViewSet, basename='snippet')
 router.register(r"users", views.UserViewSet, basename="user")
-breakpoint()
 urlpatterns = [
     path('', include(router.urls))
 ]
